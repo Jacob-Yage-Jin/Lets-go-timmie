@@ -964,14 +964,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This game is created by Yage Jin.
+  m_Text: 'Thanks to ATeshGames for tilemaps
 
 
-    I made all the assets used this
-    game.
+    Thanks to ManVeru for monster
+    sprite
 
 
-    I don''t know what else to put here.'
+    Thanks to Aswino for tophat man
+
+
+    Thanks to sanderfrenken.github.io
+    for main character'
 --- !u!222 &1752288102
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1050,9 +1054,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'About
-
-'
+  m_Text: Credits
 --- !u!222 &1854601443
 CanvasRenderer:
   m_ObjectHideFlags: 0
