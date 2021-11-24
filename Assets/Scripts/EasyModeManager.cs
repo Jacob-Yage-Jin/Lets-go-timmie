@@ -61,6 +61,7 @@ public class EasyModeManager : MonoBehaviour
 
             Button nextButton = GameObject.Find("NextButton").GetComponent<Button>();
             nextButton.onClick.AddListener(delegate {
+                GameManager.Instance.settingInfo.difficulty = "Exam";
                 GameManager.Instance.StartGame();
                 GameManager.Instance.LoadScene(4);
             });

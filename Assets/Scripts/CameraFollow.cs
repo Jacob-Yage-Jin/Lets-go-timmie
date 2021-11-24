@@ -45,6 +45,9 @@ public class CameraFollow : MonoBehaviour
             if (transform.position.x <= 0)
             {
                 transform.position = new Vector3(0, transform.position.y, transform.position.z);
+            } else if (transform.position.x >= 70)
+            {
+                transform.position = new Vector3(78, transform.position.y, transform.position.z);
             }
         }
     }
