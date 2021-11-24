@@ -25,8 +25,7 @@ public class GameSetting : MonoBehaviour
         });
         playButton = GameObject.Find("PlayButton").GetComponent<Button>();
         playButton.onClick.AddListener(delegate {
-            GameManager.Instance.StartGame();
-            GameManager.Instance.LoadScene(3);
+            onPlayClicked();
         });
 
         lastNameInput = GameObject.Find("LastName").GetComponent<InputField>();
@@ -50,6 +49,20 @@ public class GameSetting : MonoBehaviour
         difficultyDropdown.onValueChanged.AddListener(delegate {
             onDifficultyChange();
         });
+    }
+
+    private void onPlayClicked()
+    {
+        GameManager.Instance.StartGame();
+        if (GameManager.Instance.settingInfo.difficulty == "Lecture")
+        {
+            GameManager.Instance.LoadScene(3);
+        }
+        else
+        {
+            GameManager.Instance.LoadScene(4);
+        }
+
     }
 
     private void onNameChange()

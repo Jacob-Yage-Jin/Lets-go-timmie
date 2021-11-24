@@ -11,7 +11,7 @@ public class EasyModeManager : MonoBehaviour
     public LayerMask lavaLayer;
     public LayerMask goalLayer;
 
-    GameObject resultScreen; 
+    GameObject resultScreen;
 
     void spawn()
     {
@@ -55,11 +55,14 @@ public class EasyModeManager : MonoBehaviour
 
         if (winColliders.Length > 0)
         {
+            GameManager.Instance.gameInfo.gameOver = true;
+
             resultScreen.SetActive(true);
 
             Button nextButton = GameObject.Find("NextButton").GetComponent<Button>();
             nextButton.onClick.AddListener(delegate {
-                GameManager.Instance.LoadScene(0);
+                GameManager.Instance.StartGame();
+                GameManager.Instance.LoadScene(4);
             });
         }
     }

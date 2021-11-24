@@ -14,6 +14,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.gameInfo.gameOver)
+        {
+            return;
+        }
+
         animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
 
         Vector3 horizontal = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);

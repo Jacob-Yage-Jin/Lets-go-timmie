@@ -29,14 +29,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadScene(int sceneNumber)
-    {
-        SceneManager.LoadScene(sceneNumber);
-    }
-
     public void StartGame()
     {
         gameInfo = new GameInfo();
+    }
+
+    public void LoadScene(int sceneNumber)
+    {
+        SceneManager.LoadScene(sceneNumber);
     }
 
     public void QuitGame()
