@@ -21,7 +21,9 @@ public class GameManager : MonoBehaviour
             Instance = this;
             playerInfo = new PlayerInfo();
             settingInfo = new SettingInfo();
+            GameObject.Find("Audio").GetComponent<AudioSource>().Play();
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(GameObject.Find("Audio"));
         }
         else
         {

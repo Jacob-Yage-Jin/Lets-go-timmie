@@ -1,0 +1,20 @@
+Images:
+Tiles by ATeshGames (https://opengameart.org/content/super-mario-world-style-tiles)
+
+Monster by ManVeru (https://opengameart.org/content/dorver-monster)
+
+Human by Aswino (https://opengameart.org/content/man-in-cylinder-hat)
+
+Sky by PauR (https://opengameart.org/content/sky-background)
+
+Characters from (https://sanderfrenken.github.io/Universal-LPC-Spritesheet-Character-Generator)
+body/male/human/white.png, legs/pants/male/blue.png by Redshrike and wulax (https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles)
+feet/shoes/male/brown.png, torso/clothes/longsleeve/male/red.png, torso/clothes/longsleeve/male/black.png by wulax, JaidynReiman (https://opengameart.org/content/lpc-medieval-fantasy-character-sprites)
+
+Spike, Flag, Pole, Just-Flag, Key, Door, Arrow-Left, Arrow-Right, Space are created by me.
+Splash is put together by me using other people’s Tiles and Characters.
+
+Sounds:
+Platonic by tlhunter (https://opengameart.org/content/platonic)
+Roar by qubodup (https://opengameart.org/content/ghost-monster-voice-moaning-growling)
+Death, Win by Little Robot Sound Factory (https://opengameart.org/content/8-bit-sound-effects-library)

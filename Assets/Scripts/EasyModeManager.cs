@@ -48,6 +48,7 @@ public class EasyModeManager : MonoBehaviour
 
         if (deathColliders.Length > 0)
         {
+            GameObject.Find("lose-sound").GetComponent<AudioSource>().Play();
             spawn();
         }
 
@@ -55,6 +56,7 @@ public class EasyModeManager : MonoBehaviour
 
         if (winColliders.Length > 0)
         {
+            GameObject.Find("win-sound").GetComponent<AudioSource>().Play();
             GameManager.Instance.gameInfo.gameOver = true;
 
             resultScreen.SetActive(true);

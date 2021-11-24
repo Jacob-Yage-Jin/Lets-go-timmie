@@ -15,7 +15,10 @@ public class HardModeManager : MonoBehaviour
     public LayerMask headTrapLayer;
     public LayerMask flagLayer;
 
+    public AudioClip loseClip;
+
     bool hideFlagCalled;
+    bool roar = false;
 
     GameObject resultScreen;
     GameObject failScreen;
@@ -62,6 +65,9 @@ public class HardModeManager : MonoBehaviour
 
         if (deathColliders.Length > 0)
         {
+
+            GameObject.Find("lose-sound-2").GetComponent<AudioSource>().Play();
+
             failScreen.SetActive(true);
             GameManager.Instance.gameInfo.gameOver = true;
 
@@ -77,6 +83,8 @@ public class HardModeManager : MonoBehaviour
 
         if (winColliders.Length > 0)
         {
+            GameObject.Find("win-sound-2").GetComponent<AudioSource>().Play();
+
             resultScreen.SetActive(true);
             GameManager.Instance.gameInfo.gameOver = true;
 
@@ -84,6 +92,7 @@ public class HardModeManager : MonoBehaviour
             nextButton.onClick.AddListener(delegate {
                 GameManager.Instance.LoadScene(0);
             });
+
         }
 
         Collider2D[] headTrapColliders = Physics2D.OverlapCircleAll(headCheckCollider.position, 0.5f, headTrapLayer);
@@ -99,6 +108,12 @@ public class HardModeManager : MonoBehaviour
         {
             hideFlagCalled = true;
             StartCoroutine(hideFlag());
+        }
+
+        if (character.transform.position.x >= 70 && roar == false)
+        {
+            roar = true;
+            GameObject.Find("roar").GetComponent<AudioSource>().Play();
         }
     }
 
